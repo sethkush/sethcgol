@@ -3,5 +3,6 @@
 
 void uicurses_printfield(settings);
 void uicurses_setup();
+int uicurses_getcmd();
 
 #endif

@@ -21,6 +21,22 @@ int kbhit(void) {
   }
 }
 
+int uicurses_getcmd() {
+  if(kbhit()) {
+  	int keydown = getch();
+
+    switch(keydown){
+      case 'p':
+        return 1;
+        break;
+
+      case 'q':
+        return 2;
+        break;
+      }
+    }
+  return 0;
+}
 
 void uicurses_setup() {
   // setup ncurses:
