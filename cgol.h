@@ -4,9 +4,10 @@
 extern cell **field;
 
 int kbhit(void);
-settings buildfield();
+settings buildfield(int,int,int,int);
 void printfield(settings);
 void setnext(settings);
 void updatefield(settings);
+void setupcurses();
 
 #endif

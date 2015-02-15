@@ -9,15 +9,15 @@
 //----------------------------------------------------------------------------//
 
 // function prototypes:
-settings getinput();
+settings makeset();
 settings allocate(settings);
 void randomize(settings);
 void setcelldata(settings);
 void freememfail(int);
 
-settings buildfield() {
+settings buildfield(int width, int height, int random, int sleep) {
 
-  settings gameset = getinput();
+  settings gameset = makeset(width, height, random, sleep);
   gameset = allocate(gameset);
 
   if(gameset.random) {
@@ -32,21 +32,17 @@ settings buildfield() {
 
 //----------------------------------------------------------------------------//
 
-settings getinput() {
-  // get user input and create gameset:
+settings makeset(int width, int height, int random, int sleep) {
+
   settings gameset;
   
-  printf("\n\nField Width: ");
-  scanf("%d", &gameset.width);
+  gameset.width = width;
 
-  printf("Field Height: ");
-  scanf("%d", &gameset.height);
+  gameset.height = height;
   
-  printf("Randomize? (0 or 1):  ");
-  scanf("%d", &gameset.random);
+  gameset.random = random;
 
-  printf("Milliseconds between updates: ");
-  scanf("%d", &gameset.sleep);
+  gameset.sleep = sleep;
 
   return gameset;
 }

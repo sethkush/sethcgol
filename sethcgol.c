@@ -16,7 +16,7 @@ cell **field;
 int main (int argc, char *argv[]) {
 
   // setup the field
-  settings gameset = buildfield();
+  settings gameset = buildfield(150,45,1,250);
 
   if(gameset.memfail) {
     // If you are here, a malloc() call failed in the allocate() function in
@@ -25,11 +25,7 @@ int main (int argc, char *argv[]) {
     return 1;
   }
 
-  // setup ncurses:
-  initscr();
-  noecho();
-  curs_set(FALSE);
-  nodelay(stdscr, TRUE);
+  setupcurses();
 
   int run = 1;
   int paused = 0;

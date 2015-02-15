@@ -7,17 +7,7 @@
 
 //----------------------------------------------------------------------------//
 
-int kbhit(void) {
-  int ch = getch();
 
-  if (ch != ERR) {
-    ungetch(ch);
-    return 1;
-  } 
-  else {
-    return 0;
-  }
-}
 
 void printfield(settings gameset) {
   for (int y = 0; y < gameset.height; y++) {
