@@ -5,7 +5,7 @@ Todo:
 
 1. Write a proper Makefile.
 
-2. Change allocation of field array to use just one malloc() call.
+2. Comment and tidy up code.
 
 3. Create a border around the field and have it fit to the terminal.
 
