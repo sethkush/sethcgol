@@ -5,6 +5,7 @@
 
 #include "cgoltypes.h"
 #include "cgol.h"
+#include "uicurses.h"
 
 // this creates a pointer for the field. We'll do a malloc()
 // call a little later to give it some memory and turn it
@@ -25,7 +26,7 @@ int main (int argc, char *argv[]) {
     return 1;
   }
 
-  setupcurses();
+  uicurses_setup();
 
   int run = 1;
   int paused = 0;
@@ -33,7 +34,7 @@ int main (int argc, char *argv[]) {
   // this is the main loop, it is infinite:
   while(run == 1) {
     if(paused == 0){
-      printfield(gameset);
+      uicurses_printfield(gameset);
       setnext(gameset);
       updatefield(gameset);
       usleep(gameset.sleep*1000);

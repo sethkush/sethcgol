@@ -4,6 +4,7 @@
 
 #include "cgoltypes.h"
 #include "cgol.h"
+#include "uicurses.h"
 
 //----------------------------------------------------------------------------//
 
@@ -21,7 +22,7 @@ int kbhit(void) {
 }
 
 
-void setupcurses() {
+void uicurses_setup() {
   // setup ncurses:
   initscr();
   noecho();
@@ -29,7 +30,7 @@ void setupcurses() {
   nodelay(stdscr, TRUE);
 }
 
-void printfield(settings gameset) {
+void uicurses_printfield(settings gameset) {
   for (int y = 0; y < gameset.height; y++) {
     for (int x = 0; x < gameset.width; x++) {
 
