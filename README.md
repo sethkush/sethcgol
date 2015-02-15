@@ -7,11 +7,11 @@ Todo:
 
 2. Comment and tidy up code.
 
-3. Create a border around the field and have it fit to the terminal.
+3. Have the field fit to terminal.
 
 4. Allow editing while paused using arrow keys and space bar.
 
-5. Take command-line arguments for initial setup.
+5. Take command-line arguments.
 
 6. Create a loading and saving system
 
