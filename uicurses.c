@@ -33,10 +33,10 @@ int uicurses_getcmd() {
       case 'q':
         return 2;
         break;
-      }
     }
+  }
   return 0;
-}
+} 
 
 void uicurses_setup() {
   // setup ncurses:

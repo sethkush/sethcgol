@@ -16,6 +16,7 @@ cell **field;
 
 int main (int argc, char *argv[]) {
 
+
   // setup the field
   settings gameset = buildfield(150,45,1,250);
 
@@ -28,6 +29,7 @@ int main (int argc, char *argv[]) {
 
   uicurses_setup();
 
+
   int run = 1;
   int paused = 0;
 
@@ -39,15 +41,15 @@ int main (int argc, char *argv[]) {
       updatefield(gameset);
       usleep(gameset.sleep*1000);
     }
-    switch(uicurses_getcmd){
-      case '1':
+    switch(uicurses_getcmd()){
+      case 1:
       if(paused == 0)
         paused = 1;
       else if(paused != 0)
         paused = 0;
       break;
 
-      case '2':
+      case 2:
       run = 0;
       break;
     }
