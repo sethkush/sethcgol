@@ -39,22 +39,19 @@ int main (int argc, char *argv[]) {
       updatefield(gameset);
       usleep(gameset.sleep*1000);
     }
-    if(kbhit()) {
-      int keydown = getch();
+    switch(uicurses_getcmd){
+      case '1':
+      if(paused == 0)
+        paused = 1;
+      else if(paused != 0)
+        paused = 0;
+      break;
 
-      switch(keydown){
-        case 'p':
-        if(paused == 0)
-          paused = 1;
-        else if(paused != 0)
-          paused = 0;
-        break;
-
-        case 'q':
-        run = 0;
-        break;
-      }
+      case '2':
+      run = 0;
+      break;
     }
+  
   }
 
   // free up the memory given to the field
