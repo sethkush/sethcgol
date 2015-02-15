@@ -9,7 +9,7 @@
 //----------------------------------------------------------------------------//
 
 // function prototypes:
-settings makeset();
+settings makeset(int,int,int,int);
 settings allocate(settings);
 void randomize(settings);
 void setcelldata(settings);

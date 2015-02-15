@@ -21,7 +21,7 @@ int kbhit(void) {
   }
 }
 
-int uicurses_getcmd() {
+int uicurses_getcmd(void) {
   if(kbhit()) {
   	int keydown = getch();
 
@@ -38,7 +38,7 @@ int uicurses_getcmd() {
   return 0;
 } 
 
-void uicurses_setup() {
+void uicurses_setup(void) {
   // setup ncurses:
   initscr();
   noecho();
