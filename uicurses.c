@@ -28,3 +28,21 @@ void setupcurses() {
   curs_set(FALSE);
   nodelay(stdscr, TRUE);
 }
+
+void printfield(settings gameset) {
+  for (int y = 0; y < gameset.height; y++) {
+    for (int x = 0; x < gameset.width; x++) {
+
+      // prints ' ' for dead or '*' for alive to
+      // the next refresh:
+      switch (field[x][y].state) {
+      case 0:
+        mvprintw (y, x, " ");
+        break;
+      case 1:
+        mvprintw (y, x, "*");
+        break;
+      }
+    }
+  }
+}
