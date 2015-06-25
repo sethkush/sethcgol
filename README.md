@@ -7,12 +7,11 @@ Todo:
 
 2. Comment and tidy up code.
 
-3. Have the field fit to terminal.
+3. Use a socket for the backend to communicate with the frontend.
 
-4. Allow editing while paused using arrow keys and space bar.
+4. Allow editing while paused.
 
 5. Take command-line arguments.
 
-6. Create a loading and saving system
+6. Create a loading and saving system.
 
-7. Separate the UI from the backend to allow easier integration with a graphical frontend.
